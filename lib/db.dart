@@ -9,6 +9,7 @@ enum BuyExeError {idNotValid, notEnoughMoney, alreadyBought}
 enum SolveExeError {idNotValid, tooEarly, notBought}
 enum SellExeError {idNotValid, notBought}
 enum ViewExeError {idNotValid, notBought}
+// enum ViewMarketError {}
 
 final collectionIds = (
   exercises: 'j8fw5h801zf0725',
@@ -31,6 +32,17 @@ Future<Result<RecordModel, LoginError>> getTeamFromCookie (Map<String, String> h
   try {
     final user = await pb.collection('users').getFirstListItem('token = "$token" && expires > @now', expand: 'team');
     return Success(user.expand['team']!.first);
+  } on ClientException {
+    return Failure(LoginError.wrongTokenPresent);
+  }
+}
+
+Future<Result<RecordModel, LoginError>> getUserFromCookie (Map<String, String> headers) async {
+  String? token = RegExp(r'ICBMtoken=(.+)').firstMatch(headers['cookie'] ?? '')?.group(1);
+  if (token == null) return Failure(LoginError.noTokenPresent);
+  try {
+    final user = await pb.collection('users').getFirstListItem('token = "$token" && expires > @now', expand: 'team,team.solved,team.bought');
+    return Success(user);
   } on ClientException {
     return Failure(LoginError.wrongTokenPresent);
   }
@@ -122,3 +134,4 @@ Future<Result<File, ViewExeError>> view (String id, RecordModel team) async {
   );
   return Success(resFile);
 }
+
