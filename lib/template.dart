@@ -15,6 +15,7 @@ class Template {
     });
     return newValue.replaceAll(RegExp(r'<\s*func\s+.+?\s*/?\s*>.+?<\s*/func\s*>\s*', dotAll: true), '');
   }
+  String blank () => fill({});
 
   Template grab (String func) {
     final match = RegExp('<\\s*func\\s+.+?\\s*>\\s*(.+?)\\s*<\\s*\\/func\\s*>\\s*', dotAll: true).firstMatch(value);

@@ -201,6 +201,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.0"
+  eterl:
+    dependency: transitive
+    description:
+      name: eterl
+      sha256: "8669e5e766e6a1cb5593a0bee6ede7085c1a103056f1ea55cc227ee1ff32f6f7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   file:
     dependency: transitive
     description:
@@ -241,14 +249,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.1"
+  hive:
+    dependency: "direct main"
+    description:
+      name: hive
+      sha256: "8dcf6db979d7933da8217edcec84e9df1bdb4e4edc7fc77dbd5aa74356d6d941"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.3"
   http:
     dependency: transitive
     description:
       name: http
-      sha256: "759d1a329847dd0f39226c688d3e06a6b8679668e350e2891a6474f8b4bb8525"
+      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+    version: "0.13.6"
   http_multi_server:
     dependency: transitive
     description:
@@ -337,6 +353,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  nyxx:
+    dependency: "direct main"
+    description:
+      name: nyxx
+      sha256: d57ae6fb98ec62df53c44d1d80c3048e9229a756329d8f5b9ceafcc30e0ccd25
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.1.1"
+  nyxx_interactions:
+    dependency: "direct main"
+    description:
+      name: nyxx_interactions
+      sha256: a1a07cfe4d504c50ba69b4e74160bd6aaafb855502254faa4f8b302323dd2666
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.6.0"
   package_config:
     dependency: transitive
     description:
@@ -357,10 +389,10 @@ packages:
     dependency: "direct main"
     description:
       name: pocketbase
-      sha256: "87df4d68746a878b24f1615f0436d717894baa8d845097817d39afdf44bf49fb"
+      sha256: "8e0cef7586e80264e973a1dfa3c3dbda4d960c3796b8b1265896b5b185472c6f"
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.0"
+    version: "0.11.0"
   pointycastle:
     dependency: transitive
     description:
@@ -417,6 +449,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.0"
+  retry:
+    dependency: transitive
+    description:
+      name: retry
+      sha256: "822e118d5b3aafed083109c72d5f484c6dc66707885e07c0fbcb8b986bba7efc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
   scratch_space:
     dependency: transitive
     description:
